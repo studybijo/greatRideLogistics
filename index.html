@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRL - End-to-End Supply Chain Solutions</title>
+        <style>
+        @font-face {
+            font-family: 'GreatRideFont';
+            src: url('./font/Lucida Calligraphy W01.woff') format('woff'); /* Make sure this path is correct */
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+ <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -22,10 +30,13 @@
                             800: '#5d6138',
                             900: '#3d3f1c'
                         }
+                    },
+                    fontFamily: {
+                        'great-ride': ['GreatRideFont', 'cursive'],
                     }
                 }
             }
-        }
+        };
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -959,6 +970,50 @@
 .logoheight{
       height: 5rem !important;
 }
+.logo-text {
+  font-size: 40px; /* Default for very large screens */
+}
+
+/* For screens up to 1200px (e.g., desktops, laptops) */
+@media (max-width: 1200px) {
+  .logo-text {
+    font-size: 35px;
+  }
+}
+
+/* For screens up to 992px (e.g., tablets in landscape mode) */
+@media (max-width: 992px) {
+  .logo-text {
+    font-size: 30px;
+  }
+}
+
+/* Your original queries for tablets and smaller phones */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 18px;
+  }
+}
+
+/* For very small screens (e.g., older phones or narrow viewports) */
+@media (max-width: 320px) {
+  .logo-text {
+    font-size: 16px;
+  }
+}
+
 
     @keyframes bounce-animation {
       0%, 100% {
@@ -970,8 +1025,19 @@
     }
 
     .logo-bounce {
-      animation: bounce-animation 2s infinite;
+      animation: bounce-animation 3s infinite;
     }
+
+
+    /* trade mark */
+
+
+.font-great-ride .tm {
+  font-size: 40%;     /* smaller than text */
+  vertical-align: super; /* raise it up */
+  margin-left: 2px;   /* a little spacing */
+}
+
 
         /* @keyframes move-and-return {
       0% {
@@ -988,6 +1054,9 @@
     /* .logo-animate {
       animation: move-and-return 3s infinite;
     } */
+
+
+    /* nav item space adjust ment */
     </style>
   </head>
 
@@ -999,14 +1068,26 @@
     <nav class="bg-white shadow-lg relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
-          <div class="flex items-center">
+          <!-- <div class="flex items-center">
             <div class="flex-shrink-0">
             <h1 class="text-2xl font-bold text-olive-700 flex items-center">
-                <img src="./img/logoBig-removebg-preview.png" alt="GRL Logo"  class="h-8 logoheight  logo-bounce"></i>GRL
+                <img src="./img/logoBig-removebg-preview.png" alt="GRL Logo"  class="h-8 logoheight  logo-bounce"></i><div class="font-script text-[#006400]">
+  Great Ride Logistics
+</div>
               </h1>
             </div>
-          </div>
-          <div class="hidden md:flex items-center space-x-8">
+          </div> -->
+          <div class="flex items-center">
+  <div class="flex-shrink-0">
+    <h1 class="text-2xl font-bold text-olive-700 flex items-center">
+      <img src="./img/logoBig-removebg-preview.png" alt="GRL Logo" class="h-8 logoheight logo-bounce" />
+    <div class="font-great-ride text-[#006400] logo-text">
+        Great Ride Logistics<span class="tm">™</span>
+      </div>
+    </h1>
+  </div>
+</div>
+          <!-- <div class="hidden md:flex items-center space-x-8">
             <a
               href="#home"
               class="text-gray-700 hover:text-olive-600 px-3 py-2 rounded-md text-sm font-medium"
@@ -1037,7 +1118,55 @@
               class="bg-olive-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-olive-700"
               >Contact</a
             >
-          </div>
+          </div> -->
+
+          <!-- <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+  <a
+    href="#home"
+    class="text-gray-700 hover:text-olive-600 px-3 md:px-2 lg:px-3 xl:px-4 py-2 rounded-md text-sm font-medium"
+  >
+    Home
+  </a>
+  <a
+    href="#services"
+    class="text-gray-700 hover:text-olive-600 px-3 md:px-2 lg:px-3 xl:px-4 py-2 rounded-md text-sm font-medium"
+  >
+    Services
+  </a>
+  <a
+    href="#gallery"
+    class="text-gray-700 hover:text-olive-600 px-3 md:px-2 lg:px-3 xl:px-4 py-2 rounded-md text-sm font-medium"
+  >
+    Gallery
+  </a>
+  <a
+    href="#tracking"
+    class="text-gray-700 hover:text-olive-600 px-3 md:px-2 lg:px-3 xl:px-4 py-2 rounded-md text-sm font-medium"
+  >
+    Tracking
+  </a>
+  <a
+    href="#about"
+    class="text-gray-700 hover:text-olive-600 px-3 md:px-2 lg:px-3 xl:px-4 py-2 rounded-md text-sm font-medium"
+  >
+    About
+  </a>
+  <a
+    href="#contact"
+    class="bg-olive-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-olive-700"
+  >
+    Contact
+  </a>
+</div> -->
+
+ <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+    <a href="#home" class="text-gray-700 hover:text-olive-600 px-2 py-2 rounded-md text-sm font-medium">Home</a>
+    <a href="#services" class="text-gray-700 hover:text-olive-600 px-2 py-2 rounded-md text-sm font-medium">Services</a>
+    <a href="#gallery" class="text-gray-700 hover:text-olive-600 px-2 py-2 rounded-md text-sm font-medium">Gallery</a>
+    <a href="#tracking" class="text-gray-700 hover:text-olive-600 px-2 py-2 rounded-md text-sm font-medium">Tracking</a>
+    <a href="#about" class="text-gray-700 hover:text-olive-600 px-2 py-2 rounded-md text-sm font-medium">About</a>
+    <a href="#contact" class="bg-olive-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-olive-700">Contact</a>
+  </div>
           <div class="md:hidden flex items-center">
             <button
               class="mobile-menu-btn"
@@ -1051,7 +1180,7 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu mt-16" id="mobileMenu">
         <a href="#home" onclick="closeMobileMenu()">
           <i class="fas fa-home mr-3"></i>Home
         </a>
@@ -1626,6 +1755,8 @@
           </div>
         </div>
     </section>
+  
+
     <!-- Competitive Advantages Section -->
     <section class="py-20 bg-white">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1771,7 +1902,7 @@ class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none foc
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
 <div class="bg-olive-600 text-white p-6 rounded-lg transform hover:scale-105 transition duration-300">
-<div class="text-5xl font-bold mb-2 counter" data-target="13">13</div>
+<div class="text-5xl font-bold mb-2 counter" data-target="16">16</div>
 <div class="text-olive-100 font-semibold">Owned Vehicles</div>
 <div class="text-xs text-olive-200 mt-1">Our Key Advantage</div>
 </div>
@@ -2108,16 +2239,16 @@ Send Message
 <div>
     <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
     <div class="flex space-x-4">
-        <a href="#" class="text-gray-400 hover:text-olive-400 text-xl">
+        <a href="https://www.facebook.com/groups/603646456935308/?ref=share&mibextid=KtfwRi" class="text-gray-400 hover:text-olive-400 text-xl">
             <i class="fab fa-facebook"></i>
         </a>
-        <a href="#" class="text-gray-400 hover:text-olive-400 text-xl">
+        <!-- <a href="#" class="text-gray-400 hover:text-olive-400 text-xl">
             <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-olive-400 text-xl">
+        </a> -->
+        <!-- <a href="#" class="text-gray-400 hover:text-olive-400 text-xl">
             <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-olive-400 text-xl">
+        </a> -->
+        <a href="https://www.instagram.com/great_ride_group/?utm_source=qr&igsh=MWYwb28xYzNnZTV1NA%3D%3D#" class="text-gray-400 hover:text-olive-400 text-xl">
             <i class="fab fa-instagram"></i>
         </a>
     </div>
@@ -2306,38 +2437,6 @@ function startVideo(index) {
 }
 
 // function startVideo(index) {
-//     const videoCard = document.querySelector(`.video-card[data-index="${index}"]`);
-//     // const thumbnail = videoCard.querySelector('video-thumbnail');
-//     // const thumbnailOverlay = videoCard.querySelector('thumbnail-overlay');
-//     const thumbnail = videoCard.querySelector('.video-thumbnail');
-// const thumbnailOverlay = videoCard.querySelector('.thumbnail-overlay');
-
-//     const video = videos[index];
-//     const playPauseBtn = videoCard.querySelector('.play-pause-btn');
-
-//     // 43
-
-//     // Hide thumbnail and overlay
-// thumbnail.style.display = 'none';
-// thumbnailOverlay.style.display = 'none';
-
-// // Show video and controls
-// video.style.display = 'block';
-// playPauseBtn.style.display = 'block';
-
-// // Load and play video
-// if (video.readyState === 0) {
-//     video.load();
-// }
-// video.play();
-
-// // Update button state
-// const playIcon = playPauseBtn.querySelector('i');
-// playIcon.className = 'fas fa-pause';
-
-// videoStates[index] = 'playing';
-// isPlaying[index] = true;
-// }
 
 // Stop video and show thumbnail
 function stopVideo(index) {
@@ -2430,17 +2529,7 @@ function updateVideoControls() {
     });
 }
 
-// function updateVideoTitle(index) {
-//     // const videoItem = document.querySelector(`.video-item:nth-child(${index + 1})`);
-//     const videoItem = document.querySelector(`.video-item:nth-child(${index + 1})`);
 
-//     const titleElement = document.getElementById('videoTitle');
-
-//     if (videoItem && titleElement) {
-//         const title = videoItem.getAttribute('data-title');
-//         titleElement.textContent = title;
-//     }
-// }
 
 function updateVideoTitle(index) {
     const videoCard = document.querySelector(`.video-card[data-index="${index}"]`);
@@ -2454,32 +2543,7 @@ function updateVideoTitle(index) {
 
 
 
-// Auto-play next video when current one ends (optional)
-// document.addEventListener('DOMContentLoaded', function() {
-//     videos.forEach((video, index) => {
-//         if (video) {
-//             video.addEventListener('ended', function() {
-//                 if (index === currentVideoIndex && currentVideoIndex < totalVideos - 1) {
-//                     setTimeout(() => {
-//                         nextVideo();
-//                         // Auto-play the next video
-//                         setTimeout(() => {
-//                             toggleVideo(currentVideoIndex);
 
-// }, 500);
-// }, 1000);
-
-// } else {
-//     // Reset play button for current video
-//     const playBtn = document.querySelector(`.video-card[data-index="${index}"] .play-pause-btn i`);
-    
-//     if (playBtn) {
-//         playBtn.className = 'fas fa-play';
-  
-//     }
-//           isPlaying[index] = false;
-//         // videoStates[index] = 'paused';
-// }});}});})
 
 document.addEventListener('DOMContentLoaded', function() {
     const videoCards = document.querySelectorAll('.video-card');
